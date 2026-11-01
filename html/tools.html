@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="阿尧的工具箱 - 实用小工具与资源源码分享">
+<title>阿尧 · 工具箱</title>
+<link rel="icon" href="../img/avatar.jpg" type="image/jpeg">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="inner-page">
+<canvas id="particles"></canvas>
+<div class="scanlines"></div>
+<div class="boot-screen">
+  <div class="boot-logo" style="position:relative;"></div>
+  <div class="boot-text">&gt; 装载工具面板...</div>
+  <div class="boot-bar"><div class="boot-bar-fill"></div></div>
+</div>
+<nav class="navbar" id="navbar">
+  <a class="nav-brand" href="index.html"><img src="../img/avatar.jpg" alt="阿尧" class="nav-avatar"><span class="nav-name">阿尧</span></a>
+  <ul class="nav-links">
+    <li><a href="../index.html">首页</a></li>
+    <li><a href="index.html">主页</a></li>
+    <li><a href="gallery.html">相册</a></li>
+    <li><a href="music.html">音乐</a></li>
+    <li><a href="video.html">视频</a></li>
+    <li><a href="tools.html" class="active">工具</a></li>
+    <li><a href="contact.html">联系</a></li>
+  </ul>
+  <button class="theme-toggle" id="themeToggle" title="切换深色 / 浅色模式">🌙</button>
+</nav>
+<main class="page-main">
+  <header class="page-head tools-head">
+    <h1 class="section-title neon-text glitch" data-text="阿尧的工具箱">阿尧的工具箱</h1>
+    <p class="section-sub">选择你的冒险 —— 小工具 &amp; 资源源码</p>
+  </header>
+
+  <div class="tools-grid">
+    <div class="tool-card holo-card reveal" data-panel="panel-1">
+      <span class="tool-icon">🧰</span>
+      <h3>阿尧小工具</h3>
+      <p>日常实用小工具合集：聊天、听歌、查询、加密……</p>
+      <span class="tool-tag">点击展开 ▾</span>
+    </div>
+    <div class="tool-card holo-card reveal" data-panel="panel-2">
+      <span class="tool-icon">📦</span>
+      <h3>阿尧的资源源码</h3>
+      <p>开源项目与资源源码分享站：局域网聊天室、免费追剧……</p>
+      <span class="tool-tag">点击展开 ▾</span>
+    </div>
+  </div>
+
+  <div class="tool-panel" id="panel-1">
+    <div class="tool-panel-inner"><div class="tp-content">
+      <h3 class="tp-title">🧰 阿尧小工具</h3>
+      <div class="tool-row" data-tool="异地聊天室"><span class="tr-icon">💬</span><span class="tr-name">异地聊天室</span><span class="tr-badge on">内测中</span><span class="tr-arrow">→</span></div>
+      <div class="tool-row" data-tool="在线免费听歌"><span class="tr-icon">🎵</span><span class="tr-name">在线免费听歌</span><span class="tr-badge on">内测中</span><span class="tr-arrow">→</span></div>
+      <div class="tool-row" data-tool="网络测速"><span class="tr-icon">📶</span><span class="tr-name">网络测速</span><span class="tr-badge off">功能暂未上线</span><span class="tr-arrow">→</span></div>
+      <div class="tool-row" data-tool="IP 查询"><span class="tr-icon">🌍</span><span class="tr-name">IP 查询</span><span class="tr-badge off">功能暂未上线</span><span class="tr-arrow">→</span></div>
+      <div class="tool-row" data-tool="MD5 加密"><span class="tr-icon">🔐</span><span class="tr-name">MD5 加密</span><span class="tr-badge off">功能暂未上线</span><span class="tr-arrow">→</span></div>
+      <div class="tool-row" data-tool="密码生成器"><span class="tr-icon">🔑</span><span class="tr-name">密码生成器</span><span class="tr-badge off">功能暂未上线</span><span class="tr-arrow">→</span></div>
+      <div class="tool-row" data-tool="二维码生成"><span class="tr-icon">▦</span><span class="tr-name">二维码生成</span><span class="tr-badge off">功能暂未上线</span><span class="tr-arrow">→</span></div>
+      <div class="tool-row" data-tool="图片压缩"><span class="tr-icon">🗜️</span><span class="tr-name">图片压缩</span><span class="tr-badge off">功能暂未上线</span><span class="tr-arrow">→</span></div>
+      <div class="tool-row" data-tool="天气查询"><span class="tr-icon">🌦️</span><span class="tr-name">天气查询</span><span class="tr-badge off">功能暂未上线</span><span class="tr-arrow">→</span></div>
+      <div class="tool-row" data-tool="在线记事本"><span class="tr-icon">📝</span><span class="tr-name">在线记事本</span><span class="tr-badge off">功能暂未上线</span><span class="tr-arrow">→</span></div>
+    </div></div>
+  </div>
+
+  <div class="tool-panel" id="panel-2">
+    <div class="tool-panel-inner"><div class="tp-content">
+      <h3 class="tp-title">📦 阿尧的资源源码</h3>
+      <div class="tool-row" data-tool="同一局域网聊天室"><span class="tr-icon">🖥️</span><span class="tr-name">同一局域网聊天室</span><span class="tr-badge on">内测中</span><span class="tr-arrow">→</span></div>
+      <div class="tool-row" data-tool="免费追剧"><span class="tr-icon">🎬</span><span class="tr-name">免费追剧</span><span class="tr-badge on">内测中</span><span class="tr-arrow">→</span></div>
+      <div class="tool-row" data-tool="更多资源"><span class="tr-icon">🔮</span><span class="tr-name">更多资源</span><span class="tr-badge off">功能暂未上线</span><span class="tr-arrow">→</span></div>
+    </div></div>
+  </div>
+</main>
+<footer class="site-footer">
+  <p>© 2026 杨应尧 (阿尧) · 网络安全爱好者 · 赛博空间 | 微信 yyy_20080711 · QQ 3925595683</p>
+</footer>
+<div class="modal-overlay" id="soonModal">
+  <div class="modal-card">
+    <button class="modal-close" id="soonClose" title="关闭">✕</button>
+    <div class="soon-loader">
+      <div class="loader-ring"></div>
+      <span class="soon-count" id="soonCount">5</span>
+    </div>
+    <h2 class="glitch soon-title" data-text="COMING SOON">COMING SOON</h2>
+    <p class="soon-sub neon-text">功能暂未上线</p>
+    <p class="soon-desc">「<span id="soonName">该功能</span>」正在紧锣密鼓地开发中，敬请期待 ...</p>
+    <div class="soon-bar"><div class="soon-bar-fill"></div></div>
+    <button class="btn btn-pulse" id="soonOK">知 道 了</button>
+  </div>
+</div>
+
+<div id="music-player" class="music-player" data-music-prefix="../">
+  <div class="mp-bar">
+    <button class="mp-btn" id="mpCollapse" title="折叠 / 展开">▾</button>
+    <div class="mp-disc"><img src="../img/avatar.jpg" alt="碟片"></div>
+    <div class="mp-info">
+      <div class="mp-title" id="mpTitle">阿尧的音乐站</div>
+      <div class="mp-artist" id="mpArtist">点击播放</div>
+    </div>
+    <button class="mp-btn" id="mpPrev" title="上一首">⏮</button>
+    <button class="mp-btn mp-play-btn" id="mpPlay" title="播放 / 暂停">▶</button>
+    <button class="mp-btn" id="mpNext" title="下一首">⏭</button>
+    <div class="mp-progress"><input type="range" id="mpSeek" min="0" max="1000" value="0" title="进度"></div>
+    <span class="mp-time" id="mpTime">00:00 / 00:00</span>
+    <div class="mp-volume"><span>🔊</span><input type="range" id="mpVolume" min="0" max="100" value="80" title="音量"></div>
+    <button class="mp-btn" id="mpMode" title="播放模式">🔁</button>
+  </div>
+</div>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

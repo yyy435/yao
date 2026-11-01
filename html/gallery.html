@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="阿尧的赛博相册 - 14张精选竖屏壁纸">
+<title>阿尧 · 赛博相册</title>
+<link rel="icon" href="../img/avatar.jpg" type="image/jpeg">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="inner-page">
+<canvas id="particles"></canvas>
+<div class="scanlines"></div>
+<div class="boot-screen">
+  <div class="boot-logo" style="position:relative;"></div>
+  <div class="boot-text">&gt; 加载相册矩阵...</div>
+  <div class="boot-bar"><div class="boot-bar-fill"></div></div>
+</div>
+<nav class="navbar" id="navbar">
+  <a class="nav-brand" href="index.html"><img src="../img/avatar.jpg" alt="阿尧" class="nav-avatar"><span class="nav-name">阿尧</span></a>
+  <ul class="nav-links">
+    <li><a href="../index.html">首页</a></li>
+    <li><a href="index.html">主页</a></li>
+    <li><a href="gallery.html" class="active">相册</a></li>
+    <li><a href="music.html">音乐</a></li>
+    <li><a href="video.html">视频</a></li>
+    <li><a href="tools.html">工具</a></li>
+    <li><a href="contact.html">联系</a></li>
+  </ul>
+  <button class="theme-toggle" id="themeToggle" title="切换深色 / 浅色模式">🌙</button>
+</nav>
+<main class="page-main">
+  <header class="page-head">
+    <h1 class="section-title neon-text">赛 博 相 册</h1>
+    <p class="section-sub">共 14 张精选竖屏壁纸 · 点击图片查看大图 · 向下滚动浏览全部</p>
+  </header>
+  <div class="gallery-masonry">
+    <div class="gallery-item reveal">
+      <img src="../img/gallery01.jpg" alt="赛博壁纸 01" loading="lazy">
+      <span class="gallery-num">01</span>
+    </div>
+    <div class="gallery-item reveal">
+      <img src="../img/gallery02.jpg" alt="赛博壁纸 02" loading="lazy">
+      <span class="gallery-num">02</span>
+    </div>
+    <div class="gallery-item reveal">
+      <img src="../img/gallery03.jpg" alt="赛博壁纸 03" loading="lazy">
+      <span class="gallery-num">03</span>
+    </div>
+    <div class="gallery-item reveal">
+      <img src="../img/gallery04.jpg" alt="赛博壁纸 04" loading="lazy">
+      <span class="gallery-num">04</span>
+    </div>
+    <div class="gallery-item reveal">
+      <img src="../img/gallery05.jpg" alt="赛博壁纸 05" loading="lazy">
+      <span class="gallery-num">05</span>
+    </div>
+    <div class="gallery-item reveal">
+      <img src="../img/gallery06.jpg" alt="赛博壁纸 06" loading="lazy">
+      <span class="gallery-num">06</span>
+    </div>
+    <div class="gallery-item reveal">
+      <img src="../img/gallery07.jpg" alt="赛博壁纸 07" loading="lazy">
+      <span class="gallery-num">07</span>
+    </div>
+    <div class="gallery-item reveal">
+      <img src="../img/gallery08.jpg" alt="赛博壁纸 08" loading="lazy">
+      <span class="gallery-num">08</span>
+    </div>
+    <div class="gallery-item reveal">
+      <img src="../img/gallery09.jpg" alt="赛博壁纸 09" loading="lazy">
+      <span class="gallery-num">09</span>
+    </div>
+    <div class="gallery-item reveal">
+      <img src="../img/gallery10.jpg" alt="赛博壁纸 10" loading="lazy">
+      <span class="gallery-num">10</span>
+    </div>
+    <div class="gallery-item reveal">
+      <img src="../img/gallery11.jpg" alt="赛博壁纸 11" loading="lazy">
+      <span class="gallery-num">11</span>
+    </div>
+    <div class="gallery-item reveal">
+      <img src="../img/gallery12.jpg" alt="赛博壁纸 12" loading="lazy">
+      <span class="gallery-num">12</span>
+    </div>
+    <div class="gallery-item reveal">
+      <img src="../img/gallery13.jpg" alt="赛博壁纸 13" loading="lazy">
+      <span class="gallery-num">13</span>
+    </div>
+    <div class="gallery-item reveal">
+      <img src="../img/gallery14.jpg" alt="赛博壁纸 14" loading="lazy">
+      <span class="gallery-num">14</span>
+    </div>
+    </div>
+  </div>
+  <div class="gallery-end-hint reveal">
+    <span>- 已浏览全部 14 张壁纸 -</span>
+  </div>
+</main>
+<footer class="site-footer">
+  <p>&copy; 2026 杨应尧 (阿尧) &middot; 网络安全爱好者 &middot; 赛博空间 | 微信 yyy_20080711 &middot; QQ 3925595683</p>
+</footer>
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" id="lbClose" title="关闭">&#10005;</button>
+  <button class="lb-nav lb-prev" id="lbPrev" title="上一张">&#8249;</button>
+  <img class="lb-img" id="lbImg" src="" alt="预览大图">
+  <button class="lb-nav lb-next" id="lbNext" title="下一张">&#8250;</button>
+  <div class="lb-caption" id="lbCaption"></div>
+</div>
+
+<div id="music-player" class="music-player" data-music-prefix="../">
+  <div class="mp-bar">
+    <button class="mp-btn" id="mpCollapse" title="折叠 / 展开">▾</button>
+    <div class="mp-disc"><img src="../img/avatar.jpg" alt="碟片"></div>
+    <div class="mp-info">
+      <div class="mp-title" id="mpTitle">阿尧的音乐站</div>
+      <div class="mp-artist" id="mpArtist">点击播放</div>
+    </div>
+    <button class="mp-btn" id="mpPrev" title="上一首">⏮</button>
+    <button class="mp-btn mp-play-btn" id="mpPlay" title="播放 / 暂停">▶</button>
+    <button class="mp-btn" id="mpNext" title="下一首">⏭</button>
+    <div class="mp-progress"><input type="range" id="mpSeek" min="0" max="1000" value="0" title="进度"></div>
+    <span class="mp-time" id="mpTime">00:00 / 00:00</span>
+    <div class="mp-volume"><span>🔊</span><input type="range" id="mpVolume" min="0" max="100" value="80" title="音量"></div>
+    <button class="mp-btn" id="mpMode" title="播放模式">🔁</button>
+  </div>
+</div>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

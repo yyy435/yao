@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="联系阿尧 - 微信/QQ/邮箱/电话，扫码或点击复制">
+<title>阿尧 · 联系我</title>
+<link rel="icon" href="../img/avatar.jpg" type="image/jpeg">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="inner-page">
+<canvas id="particles"></canvas>
+<div class="scanlines"></div>
+<div class="boot-screen">
+  <div class="boot-logo" style="position:relative;"></div>
+  <div class="boot-text">&gt; 建立通信链路...</div>
+  <div class="boot-bar"><div class="boot-bar-fill"></div></div>
+</div>
+<nav class="navbar" id="navbar">
+  <a class="nav-brand" href="index.html"><img src="../img/avatar.jpg" alt="阿尧" class="nav-avatar"><span class="nav-name">阿尧</span></a>
+  <ul class="nav-links">
+    <li><a href="../index.html">首页</a></li>
+    <li><a href="index.html">主页</a></li>
+    <li><a href="gallery.html">相册</a></li>
+    <li><a href="music.html">音乐</a></li>
+    <li><a href="video.html">视频</a></li>
+    <li><a href="tools.html">工具</a></li>
+    <li><a href="contact.html" class="active">联系</a></li>
+  </ul>
+  <button class="theme-toggle" id="themeToggle" title="切换深色 / 浅色模式">🌙</button>
+</nav>
+<main class="page-main">
+  <header class="page-head">
+    <h1 class="section-title neon-text">联 系 阿 尧</h1>
+    <p class="section-sub">点击微信 / QQ / Q群 查看二维码 · 点击邮箱 / 电话一键复制</p>
+  </header>
+
+  <div class="contact-grid">
+    <div class="contact-card holo-card reveal" data-qr="../img/WX.jpg" data-title="扫码添加微信">
+      <span class="cc-icon">💬</span>
+      <div class="cc-body"><p class="cc-name">微信 WeChat</p><p class="cc-value">yyy_20080711</p></div>
+      <span class="cc-hint">二维码</span>
+    </div>
+    <div class="contact-card holo-card reveal" data-qr="../img/QQ.jpg" data-title="扫码添加 QQ">
+      <span class="cc-icon">🐧</span>
+      <div class="cc-body"><p class="cc-name">QQ</p><p class="cc-value">3925595683</p></div>
+      <span class="cc-hint">二维码</span>
+    </div>
+    <div class="contact-card holo-card reveal" data-copy="yyy_20080711@163.com">
+      <span class="cc-icon">📧</span>
+      <div class="cc-body"><p class="cc-name">邮箱 Email</p><p class="cc-value">yyy_20080711@163.com</p></div>
+      <span class="cc-hint">点击复制</span>
+    </div>
+    <div class="contact-card holo-card reveal" data-copy="130-9968-7560">
+      <span class="cc-icon">📞</span>
+      <div class="cc-body"><p class="cc-name">电话 Phone</p><p class="cc-value">130-9968-7560</p></div>
+      <span class="cc-hint">点击复制</span>
+    </div>
+    <div class="contact-card holo-card reveal" data-qr="../img/交流群.jpg" data-title="扫码加入交流群">
+      <span class="cc-icon">👥</span>
+      <div class="cc-body"><p class="cc-name">Q群 QQ Group</p><p class="cc-value">971621716</p></div>
+      <span class="cc-hint">二维码</span>
+    </div>
+    <div class="contact-card holo-card reveal cc-note">
+      <span class="cc-icon">🛡️</span>
+      <div class="cc-body"><p class="cc-name">安全提示</p><p class="cc-value">添加好友请备注来源，谨防网络诈骗</p></div>
+    </div>
+  </div>
+
+  <form class="contact-form holo-card reveal" id="contactForm">
+    <h3>✉️ 留言板</h3>
+    <div class="form-row"><input type="text" name="name" placeholder="你的名字 *" required maxlength="20"></div>
+    <div class="form-row"><input type="email" name="email" placeholder="你的邮箱 *" required maxlength="50"></div>
+    <div class="form-row"><textarea name="msg" placeholder="想对阿尧说点什么 ... *" required maxlength="500"></textarea></div>
+    <button type="submit" class="btn btn-pulse form-submit">发送消息 🚀</button>
+  </form>
+</main>
+<footer class="site-footer">
+  <p>© 2026 杨应尧 (阿尧) · 网络安全爱好者 · 赛博空间 | 微信 yyy_20080711 · QQ 3925595683</p>
+</footer>
+<div class="modal-overlay" id="qrModal">
+  <div class="modal-card qr-card">
+    <button class="modal-close" id="qrClose" title="关闭">✕</button>
+    <h3 class="qr-title neon-text" id="qrTitle">扫码添加</h3>
+    <img class="qr-img" id="qrImg" src="" alt="二维码">
+    <p class="qr-hint">打开对应 App 扫码添加阿尧</p>
+  </div>
+</div>
+
+<div id="music-player" class="music-player" data-music-prefix="../">
+  <div class="mp-bar">
+    <button class="mp-btn" id="mpCollapse" title="折叠 / 展开">▾</button>
+    <div class="mp-disc"><img src="../img/avatar.jpg" alt="碟片"></div>
+    <div class="mp-info">
+      <div class="mp-title" id="mpTitle">阿尧的音乐站</div>
+      <div class="mp-artist" id="mpArtist">点击播放</div>
+    </div>
+    <button class="mp-btn" id="mpPrev" title="上一首">⏮</button>
+    <button class="mp-btn mp-play-btn" id="mpPlay" title="播放 / 暂停">▶</button>
+    <button class="mp-btn" id="mpNext" title="下一首">⏭</button>
+    <div class="mp-progress"><input type="range" id="mpSeek" min="0" max="1000" value="0" title="进度"></div>
+    <span class="mp-time" id="mpTime">00:00 / 00:00</span>
+    <div class="mp-volume"><span>🔊</span><input type="range" id="mpVolume" min="0" max="100" value="80" title="音量"></div>
+    <button class="mp-btn" id="mpMode" title="播放模式">🔁</button>
+  </div>
+</div>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="阿尧的赛博影院 - 视频播放与屏幕录制">
+<title>阿尧 · 赛博影院</title>
+<link rel="icon" href="../img/avatar.jpg" type="image/jpeg">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="inner-page">
+<canvas id="particles"></canvas>
+<div class="scanlines"></div>
+<div class="boot-screen">
+  <div class="boot-logo" style="position:relative;"></div>
+  <div class="boot-text">&gt; 初始化视频引擎...</div>
+  <div class="boot-bar"><div class="boot-bar-fill"></div></div>
+</div>
+<nav class="navbar" id="navbar">
+  <a class="nav-brand" href="index.html"><img src="../img/avatar.jpg" alt="阿尧" class="nav-avatar"><span class="nav-name">阿尧</span></a>
+  <ul class="nav-links">
+    <li><a href="../index.html">首页</a></li>
+    <li><a href="index.html">主页</a></li>
+    <li><a href="gallery.html">相册</a></li>
+    <li><a href="music.html">音乐</a></li>
+    <li><a href="video.html" class="active">视频</a></li>
+    <li><a href="tools.html">工具</a></li>
+    <li><a href="contact.html">联系</a></li>
+  </ul>
+  <button class="theme-toggle" id="themeToggle" title="切换深色 / 浅色模式">🌙</button>
+</nav>
+<main class="page-main">
+  <header class="page-head">
+    <h1 class="section-title neon-text">赛 博 影 院</h1>
+    <p class="section-sub">阿尧的视频空间 · 点击视频播放 / 暂停</p>
+  </header>
+
+  <section class="video-wrap holo-card reveal">
+    <div class="video-box" id="videoBox">
+      <video id="video" src="../video/main.mp4" poster="../video/poster.jpg" preload="none" playsinline></video>
+      <div class="video-overlay" id="videoOverlay">▶</div>
+      <div class="video-controls" id="videoControls">
+        <input type="range" id="vcSeek" min="0" max="1000" value="0" title="进度">
+        <div class="vc-btns">
+          <button class="vc-btn" id="vcPlay" title="播放 / 暂停">▶</button>
+          <span class="vc-time" id="vcTime">00:00 / 00:00</span>
+          <div class="vc-vol"><span>🔊</span><input type="range" id="vcVolume" min="0" max="100" value="100" title="音量"></div>
+          <button class="vc-btn" id="vcFull" title="全屏">⛶</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="video-side">
+    <div class="video-info holo-card reveal">
+      <h3>📹 屏幕录制 2026-02-17</h3>
+      <p class="vi-meta">类型：MP4 · 来源：本机屏幕录制</p>
+      <p>这是一段阿尧的屏幕录制视频，记录了一次完整的操作演示过程。视频素材由 Windows 屏幕录制功能生成。</p>
+    </div>
+    <div class="video-playlist holo-card reveal">
+      <h3>📃 播放列表</h3>
+      <ul>
+        <li class="vpl-item active">▶ 屏幕录制 2026-02-17</li>
+        <li class="vpl-item disabled">＋ 更多视频，敬请期待 ...</li>
+      </ul>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <p>© 2026 杨应尧 (阿尧) · 网络安全爱好者 · 赛博空间 | 微信 yyy_20080711 · QQ 3925595683</p>
+</footer>
+
+<div id="music-player" class="music-player" data-music-prefix="../">
+  <div class="mp-bar">
+    <button class="mp-btn" id="mpCollapse" title="折叠 / 展开">▾</button>
+    <div class="mp-disc"><img src="../img/avatar.jpg" alt="碟片"></div>
+    <div class="mp-info">
+      <div class="mp-title" id="mpTitle">阿尧的音乐站</div>
+      <div class="mp-artist" id="mpArtist">点击播放</div>
+    </div>
+    <button class="mp-btn" id="mpPrev" title="上一首">⏮</button>
+    <button class="mp-btn mp-play-btn" id="mpPlay" title="播放 / 暂停">▶</button>
+    <button class="mp-btn" id="mpNext" title="下一首">⏭</button>
+    <div class="mp-progress"><input type="range" id="mpSeek" min="0" max="1000" value="0" title="进度"></div>
+    <span class="mp-time" id="mpTime">00:00 / 00:00</span>
+    <div class="mp-volume"><span>🔊</span><input type="range" id="mpVolume" min="0" max="100" value="80" title="音量"></div>
+    <button class="mp-btn" id="mpMode" title="播放模式">🔁</button>
+  </div>
+</div>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

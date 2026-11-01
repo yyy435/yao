@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="阿尧 - 网络安全爱好者 & 漏洞修复者的个人主页">
+<meta name="keywords" content="阿尧,杨应尧,网络安全,渗透测试,Web安全,Python,赛博空间">
+<title>阿尧 · 个人主页</title>
+<link rel="icon" href="../img/avatar.jpg" type="image/jpeg">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="inner-page">
+<canvas id="particles"></canvas>
+<div class="scanlines"></div>
+
+<!-- 启动加载动画 -->
+<div class="boot-screen">
+  <div class="boot-logo" style="position:relative;"></div>
+  <div class="boot-text">&gt; 加载主页模块...</div>
+  <div class="boot-bar"><div class="boot-bar-fill"></div></div>
+</div>
+
+<nav class="navbar" id="navbar">
+  <a class="nav-brand" href="index.html"><img src="../img/avatar.jpg" alt="阿尧" class="nav-avatar"><span class="nav-name">阿尧</span></a>
+  <ul class="nav-links">
+    <li><a href="../index.html">首页</a></li>
+    <li><a href="index.html" class="active">主页</a></li>
+    <li><a href="gallery.html">相册</a></li>
+    <li><a href="music.html">音乐</a></li>
+    <li><a href="video.html">视频</a></li>
+    <li><a href="tools.html">工具</a></li>
+    <li><a href="contact.html">联系</a></li>
+  </ul>
+  <button class="theme-toggle" id="themeToggle" title="切换深色 / 浅色模式">🌙</button>
+</nav>
+<main class="page-main">
+  <section class="hero-section">
+    <div class="hero-info holo-card reveal">
+      <div class="hero-avatar">
+        <img src="../img/avatar.jpg" alt="阿尧头像">
+        <span class="online-dot"></span>
+      </div>
+      <div class="hero-texts">
+        <h1>杨应尧 <span class="neon-text">/ 阿尧</span></h1>
+        <p class="tagline">网络安全爱好者 &amp; 漏洞修复者 · 生于 2008.07</p>
+        <div class="tag-chips">
+          <span># 渗透测试</span><span># 移动端安全</span><span># Web 漏洞挖掘</span><span># Python</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 数据统计板块 -->
+  <section class="section" id="stats">
+    <h2 class="section-title neon-text">赛 博 数 据</h2>
+    <div class="stats-grid">
+      <div class="stat-card holo-card reveal">
+        <div class="stat-num" data-count="6" data-suffix="+">0</div>
+        <div class="stat-label">技能领域</div>
+      </div>
+      <div class="stat-card holo-card reveal">
+        <div class="stat-num" data-count="3" data-suffix="">0</div>
+        <div class="stat-label">原创工具</div>
+      </div>
+      <div class="stat-card holo-card reveal">
+        <div class="stat-num" data-count="21" data-suffix="">0</div>
+        <div class="stat-label">精选壁纸</div>
+      </div>
+      <div class="stat-card holo-card reveal">
+        <div class="stat-num" data-count="365" data-suffix="+">0</div>
+        <div class="stat-label">活跃天数</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <h2 class="section-title neon-text">关 于 我</h2>
+    <div class="about-card holo-card reveal">
+      <p class="about-lead">你好，我是杨应尧（阿尧）—— 一个 2008 年出生的网络安全爱好者。</p>
+      <p>白天修补世界的漏洞，晚上挖掘代码的真相。专注于渗透测试、移动端安全研究与 Web 漏洞挖掘，相信每一行代码背后都藏着值得探索的秘密。</p>
+      <ul class="about-list">
+        <li><span class="al-icon">🕵️</span>渗透测试：攻防演练、内网渗透、漏洞验证</li>
+        <li><span class="al-icon">📱</span>移动端安全：APP 逆向、加固对抗、安全检测</li>
+        <li><span class="al-icon">🌐</span>Web 安全：OWASP 漏洞挖掘与修复</li>
+        <li><span class="al-icon">🐍</span>工具开发：Python 自动化与自研安全工具</li>
+        <li><span class="al-icon">⚡</span>座右铭：先学会破坏，才能更好地守护</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="skills">
+    <h2 class="section-title neon-text">技 能 矩 阵</h2>
+    <p class="section-sub">点击技能卡片查看详情（图标弹跳 + 标题渐变 + 打字机描述）</p>
+    <div class="skills-grid">
+      <div class="skill-card holo-card reveal" style="--i:1">
+        <span class="skill-icon">🐧</span>
+        <h3 class="skill-title">Linux 系统</h3>
+        <p class="skill-desc" data-text="熟悉 Linux 系统运维与命令行操作，掌握常用安全审计工具与脚本编写技巧。">熟悉 Linux 系统运维与命令行操作，掌握常用安全审计工具与脚本编写技巧。</p>
+      </div>
+      <div class="skill-card holo-card reveal" style="--i:2">
+        <span class="skill-icon">🐍</span>
+        <h3 class="skill-title">Python 开发</h3>
+        <p class="skill-desc" data-text="熟练使用 Python 编写自动化脚本、爬虫程序与安全测试工具。">熟练使用 Python 编写自动化脚本、爬虫程序与安全测试工具。</p>
+      </div>
+      <div class="skill-card holo-card reveal" style="--i:3">
+        <span class="skill-icon">🕵️</span>
+        <h3 class="skill-title">渗透测试</h3>
+        <p class="skill-desc" data-text="掌握信息收集、漏洞扫描、内网渗透与渗透测试报告编写的完整流程。">掌握信息收集、漏洞扫描、内网渗透与渗透测试报告编写的完整流程。</p>
+      </div>
+      <div class="skill-card holo-card reveal" style="--i:4">
+        <span class="skill-icon">📱</span>
+        <h3 class="skill-title">移动端安全</h3>
+        <p class="skill-desc" data-text="熟悉 APP 逆向分析、脱壳加固对抗与移动端漏洞挖掘技术。">熟悉 APP 逆向分析、脱壳加固对抗与移动端漏洞挖掘技术。</p>
+      </div>
+      <div class="skill-card holo-card reveal" style="--i:5">
+        <span class="skill-icon">🌐</span>
+        <h3 class="skill-title">Web 安全</h3>
+        <p class="skill-desc" data-text="深入理解 SQL 注入、XSS、SSRF、文件上传等常见 Web 漏洞的原理与利用。">深入理解 SQL 注入、XSS、SSRF、文件上传等常见 Web 漏洞的原理与利用。</p>
+      </div>
+      <div class="skill-card holo-card reveal" style="--i:6">
+        <span class="skill-icon">🛠️</span>
+        <h3 class="skill-title">工具开发</h3>
+        <p class="skill-desc" data-text="独立开发过聊天室、在线听歌站等实用工具与安全辅助小工具。">独立开发过聊天室、在线听歌站等实用工具与安全辅助小工具。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 成长时间线 -->
+  <section class="section" id="timeline">
+    <h2 class="section-title neon-text">成 长 轨 迹</h2>
+    <div class="timeline">
+      <div class="timeline-item reveal">
+        <div class="timeline-content holo-card">
+          <div class="timeline-date">2024 · 启程</div>
+          <h3>踏入网络安全世界</h3>
+          <p>初次接触渗透测试与 Web 安全，开始系统学习 Linux 命令行与 Python 编程基础。</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-content holo-card">
+          <div class="timeline-date">2025 · 进阶</div>
+          <h3>深入漏洞挖掘</h3>
+          <p>掌握 SQL 注入、XSS、SSRF 等 OWASP Top 10 漏洞原理，开始研究移动端安全与 APP 逆向。</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-content holo-card">
+          <div class="timeline-date">2026 · 实战</div>
+          <h3>独立工具开发</h3>
+          <p>开发局域网聊天室、在线听歌站等实用工具，搭建赛博朋克风格个人主页，持续深耕安全领域。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="works">
+    <h2 class="section-title neon-text">作 品 展 示</h2>
+    <div class="works-grid">
+      <div class="work-card holo-card reveal">
+        <div class="work-icon">🌐</div>
+        <h3>个人主页</h3>
+        <p>本项目 —— 赛博朋克风格的多页面个人空间。</p>
+        <a class="work-link" href="index.html">立即体验 →</a>
+      </div>
+      <div class="work-card holo-card reveal">
+        <div class="work-icon">🎵</div>
+        <h3>赛博音乐站</h3>
+        <p>带音频可视化与旋转唱片动画的音乐播放页面。</p>
+        <a class="work-link" href="music.html">去听歌 →</a>
+      </div>
+      <div class="work-card holo-card reveal">
+        <div class="work-icon">🧰</div>
+        <h3>阿尧工具箱</h3>
+        <p>集合实用小工具与资源源码入口的科技面板。</p>
+        <a class="work-link" href="tools.html">打开工具 →</a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <p>© 2026 杨应尧 (阿尧) · 网络安全爱好者 · 赛博空间 | 微信 yyy_20080711 · QQ 3925595683</p>
+</footer>
+
+<div id="music-player" class="music-player" data-music-prefix="../">
+  <div class="mp-bar">
+    <button class="mp-btn" id="mpCollapse" title="折叠 / 展开">▾</button>
+    <div class="mp-disc"><img src="../img/avatar.jpg" alt="碟片"></div>
+    <div class="mp-info">
+      <div class="mp-title" id="mpTitle">阿尧的音乐站</div>
+      <div class="mp-artist" id="mpArtist">点击播放</div>
+    </div>
+    <button class="mp-btn" id="mpPrev" title="上一首">⏮</button>
+    <button class="mp-btn mp-play-btn" id="mpPlay" title="播放 / 暂停">▶</button>
+    <button class="mp-btn" id="mpNext" title="下一首">⏭</button>
+    <div class="mp-progress"><input type="range" id="mpSeek" min="0" max="1000" value="0" title="进度"></div>
+    <span class="mp-time" id="mpTime">00:00 / 00:00</span>
+    <div class="mp-volume"><span>🔊</span><input type="range" id="mpVolume" min="0" max="100" value="80" title="音量"></div>
+    <button class="mp-btn" id="mpMode" title="播放模式">🔁</button>
+  </div>
+</div>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
