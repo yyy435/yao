@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="阿尧的赛博空间 - 网络安全爱好者 & 漏洞修复者的个人主页">
+<meta name="keywords" content="阿尧,杨应尧,网络安全,渗透测试,赛博朋克,个人主页">
+<title>阿尧的赛博空间 · 欢迎光临</title>
+<link rel="icon" href="img/avatar.jpg" type="image/jpeg">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="welcome-page">
+<canvas id="particles"></canvas>
+<div class="scanlines"></div>
+
+<!-- 启动加载动画 -->
+<div class="boot-screen">
+  <div class="boot-logo" style="position:relative;"></div>
+  <div class="boot-text">&gt; 初始化赛博空间...</div>
+  <div class="boot-bar"><div class="boot-bar-fill"></div></div>
+</div>
+
+<button class="theme-toggle theme-toggle-fixed" id="themeToggle" title="切换深色 / 浅色模式">🌙</button>
+<main class="welcome-wrap">
+  <div class="avatar-ring">
+    <img src="img/avatar.jpg" alt="阿尧头像">
+  </div>
+  <h1 class="glitch hero-name" data-text="杨应尧">杨应尧</h1>
+  <p class="hero-nick neon-text">AKA 阿尧 · 网络安全爱好者 &amp; 漏洞修复者</p>
+  <p class="hero-slogan" id="heroSlogan">在数字世界的暗巷里，寻找漏洞，也修复明天。</p>
+  <a href="html/index.html" class="btn btn-pulse enter-btn">⚡ 进入主页</a>
+  <p class="welcome-hint">↓ 点击进入阿尧的赛博空间 ↓</p>
+</main>
+
+<div id="music-player" class="music-player" data-music-prefix="">
+  <div class="mp-bar">
+    <button class="mp-btn" id="mpCollapse" title="折叠 / 展开">▾</button>
+    <div class="mp-disc"><img src="img/avatar.jpg" alt="碟片"></div>
+    <div class="mp-info">
+      <div class="mp-title" id="mpTitle">阿尧的音乐站</div>
+      <div class="mp-artist" id="mpArtist">点击播放</div>
+    </div>
+    <button class="mp-btn" id="mpPrev" title="上一首">⏮</button>
+    <button class="mp-btn mp-play-btn" id="mpPlay" title="播放 / 暂停">▶</button>
+    <button class="mp-btn" id="mpNext" title="下一首">⏭</button>
+    <div class="mp-progress"><input type="range" id="mpSeek" min="0" max="1000" value="0" title="进度"></div>
+    <span class="mp-time" id="mpTime">00:00 / 00:00</span>
+    <div class="mp-volume"><span>🔊</span><input type="range" id="mpVolume" min="0" max="100" value="80" title="音量"></div>
+    <button class="mp-btn" id="mpMode" title="播放模式">🔁</button>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
